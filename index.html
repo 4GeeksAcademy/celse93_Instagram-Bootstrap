@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylessheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="d-inline-block align-text-top">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="navbar-brand mb-0 fs-6 fw-medium">Instagram</span>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#new-post-modal">Create a new post</button>
+                    <div class="dropdown ms-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- modal box -->
+        <div class="modal fade" id="new-post-modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="modalLabel">Create a new post</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="description" class="form-label">Caption:</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="description" placeholder="Add the caption of your post here"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-start mt-3">
+                            <button type="button" class="btn btn-light btn-sm me-2 border"><i class="fa-solid fa-camera"></i></button>
+                            <button type="button" class="btn btn-light btn-sm border"><i class="fa-solid fa-location-dot"></i></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- top icons to select the type of view -->
+        <ul class="nav justify-content-center my-3" role="tablist">
+            <li class="nav-item" role="presentation">
+                <input id="btnradio1" type="radio" class="btn-check active" name="btnradio" data-bs-toggle="pill" data-bs-target="#pics-grid" 
+                role="tab" aria-controls="pics-grid" autocomplete="off" aria-selected="true">
+                <label class="btn btn-outline-primary text-secondary border border-0" for="btnradio1"><i class="fa-solid fa-table-cells"></i></label>
+            </li>
+            <li class="nav-item" role="presentation">
+                <input id="btnradio2" type="radio" class="btn-check" name="btnradio" data-bs-toggle="pill" data-bs-target="#pics-vertical" 
+                role="tab" aria-controls="pics-vertical" autocomplete="off" aria-selected="false">
+                <label class="btn btn-outline-primary text-secondary border border-0" for="btnradio2"><i class="fa-solid fa-square"></i></label>
+            </li>
+        </ul>
+        
+
+        <!-- grid view -->
+       <div class="container tab-content">
+            <div class="tab-pane fade active show" id="pics-grid" role="tabpanel" aria-labelledby="btnradio1" tabindex="0">
+                <div class="row mb-4">
+                    <div class="col-4">
+                        <img src="pics/andre-furtado.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="pics/francesco-ungaro.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="pics/freestockpro.jpg" alt="picture" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4">
+                        <img src="pics/giallo.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="pics/jill-wellington.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="pics/leonie-fahjen.jpg" alt="picture" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4">
+                        <img src="pics/lulaby.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="pics/marcelo-jaboo.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="pics/pixabay.jpg" alt="picture" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- pics vertical view -->
+        <div class="container tab-content">
+            <div class="row tab-pane fade d-flex justify-content-center" id="pics-vertical" role="tabpanel" aria-labelledby="btnradio2" tabindex="0">
+                <div class="col-7 d-flex flex-column row-gap-3">
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>My vespa!</h6>
+                            <p>02/12</p>
+                        </div>
+                        <img src="pics/lulaby.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>200 Likes</strong></h6>
+                            <p class="card-text">Example text picture description.</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>Farm</h6>
+                            <p>02/12</p>
+                        </div>
+                        <img src="pics/pixabay.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>200 Likes</strong></h6>
+                            <p class="card-text">Example text picture description.</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>Studio</h6>
+                            <p>02/12</p>
+                        </div>
+                        <img src="pics/marcelo-jaboo.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>200 Likes</strong></h6>
+                            <p class="card-text">Example text picture description.</p>
+                        </div>
+                    </div>   
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>Cuba</h6>
+                            <p>02/12</p>
+                        </div>
+                        <img src="pics/leonie-fahjen.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>200 Likes</strong></h6>
+                            <p class="card-text">Example text picture description.</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>Fields of gold!</h6>
+                            <p>02/12</p>
+                        </div>
+                        <img src="pics/freestockpro.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>200 Likes</strong></h6>
+                            <p class="card-text">Example text picture description.</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>Trip!</h6>
+                            <p>02/12</p>
+                        </div>
+                        <img src="pics/jill-wellington.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>200 Likes</strong></h6>
+                            <p class="card-text">Example text picture description.</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>Vintage watches</h6>
+                            <p>02/12</p>
+                        </div>
+                        <img src="pics/giallo.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>200 Likes</strong></h6>
+                            <p class="card-text">Example text picture description.</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>Ballon!</h6>
+                            <p>02/12</p>
+                        </div>
+                        <img src="pics/francesco-ungaro.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>200 Likes</strong></h6>
+                            <p class="card-text">Example text picture description.</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
